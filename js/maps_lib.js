@@ -9,16 +9,16 @@
         this.searchRadius = options.searchRadius || 805; //in meters ~ 1/2 mile
 
         // the encrypted Table ID of your Fusion Table (found under File => About)
-        this.fusionTableId = options.fusionTableId || "",
+        this.fusionTableId = options.fusionTableId || "19qaTBCXuRnxkqFwdm4Xq3h7X7sCumBjuS7M3EMil",
 
         // Found at https://console.developers.google.com/
         // Important! this key is for demonstration purposes. please register your own.
-        this.googleApiKey = options.googleApiKey || "",
+        this.googleApiKey = options.googleApiKey || "AIzaSyBrcmhq7MS3Wr0qo3osNXETtzz99l6r0lg",
         
         // name of the location column in your Fusion Table.
         // NOTE: if your location column name has spaces in it, surround it with single quotes
         // example: locationColumn:     "'my location'",
-        this.locationColumn = options.locationColumn || "geometry";
+        this.locationColumn = options.locationColumn || "geolocation";
         
         // appends to all address searches if not present
         this.locationScope = options.locationScope || "";
@@ -27,7 +27,7 @@
         this.defaultZoom = options.defaultZoom || 11; 
 
         // center that your map defaults to
-        this.map_centroid = new google.maps.LatLng(options.map_center[0], options.map_center[1]);
+        this.map_centroid = new google.maps.LatLng(options.map_center[34.038688], options.map_center[-118.274526]);
         
         // marker image for your searched address
         if (typeof options.addrMarkerImage !== 'undefined') {
